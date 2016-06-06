@@ -166,7 +166,7 @@ function addGeometry(name, geometry) {
     change: onChangeColor.bind(null, name),
     defaultValue: c
   })
-  initTooltips()
+  // initTooltips()
 }
 
 function onChangeColor(name, color) {
@@ -264,10 +264,10 @@ function enableGet() {
 }
 
 function initTooltips() {
-  $('.buttons i').popup({position: 'top center'})
+  // $('.buttons i').popup({position: 'top center'})
 }
 
-function foo() {
+function init() {
   player = new Player();
   initMaster()
   hideAccordions()
@@ -290,4 +290,4 @@ function animate() {
   player.render()
 }
 
-window.onload = foo
+window.onload = init

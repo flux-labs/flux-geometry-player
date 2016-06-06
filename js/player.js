@@ -1,7 +1,6 @@
 class Player {
 
   constructor() {
-    console.log('hello')
     this.viewport = new FluxViewport(document.querySelector("#view"))
     this.viewport.setupDefaultLighting()
     this.viewport._renderer.setClearColor(0xffffff)
