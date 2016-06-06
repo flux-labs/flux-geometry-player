@@ -267,7 +267,7 @@ function initTooltips() {
   $('.buttons i').popup({position: 'top center'})
 }
 
-function init() {
+function foo() {
   player = new Player();
   initMaster()
   hideAccordions()
@@ -290,4 +290,4 @@ function animate() {
   player.render()
 }
 
-$(document).ready(init)
+window.onload = foo
