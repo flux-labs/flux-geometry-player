@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flux Viewport</title>
+    <script src="../lib/three.min.js"></script>
+    <script src="../lib/flux-three-plugins.global.js"></script>
+    <script src="../build/flux-viewport.global.js"></script>
+</head>
+<body onkeypress="focusAll()" onload="handleLoad()">
+    <h2>Flux Viewport</h2>
+    <div id="container" style="width:400px;height:400px;display:inline-block;background-color:#FFCCCC"></div>
+
+    <script>
+    'use strict';
+
+    var torus = {"origin": [0,0,0],"majorRadius": 5,"minorRadius":3,"axis":[0,0,1],"primitive":"torus"};
+    var fluxViewport = null;
+
+    function handleLoad() {
+        fluxViewport = new FluxViewport(container);
+
+        fluxViewport.setupDefaultLighting();
+
+        fluxViewport.setGeometryEntity(torus);
+    }
+
+    function focusAll() {
+        fluxViewport.focus();
+    }
+    </script>
+</body>
+</html>
